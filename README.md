@@ -1,69 +1,68 @@
+# 🌿 EcoSim | Enterprise LCA AI
 
+EcoSim replaces static carbon calculators with real-time Machine Learning and LiveAI streaming. Built for enterprise supply chains, it optimizes logistics, audits ESG greenwashing via NLP, and tracks live organizational emissions.
 
-## How can I edit this code?
+## 🚀 Core Features
 
-There are several ways of editing your application.
+- **LiveAI Enterprise Analytics:** Powered by the **Pathway** framework, EcoSim ingests streaming IoT supply chain data and runs real-time ML inference.
+- **B2B LCA Simulator:** A custom-trained Random Forest Regressor predicts Scope 3 emissions based on material extraction, grid intensity, and freight modes.
+- **Greenwashing NLP Auditor:** Integrates a Hugging Face `DistilBERT` zero-shot classification pipeline to semantically analyze and score ESG marketing claims.
+- **Fleet Transit Logic:** Calculates Well-to-Wheels footprints, per-passenger emissions, and EV manufacturing payback times.
 
-**Use Lovable**
+## 💻 Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
+**Frontend:**
+- React 18 + TypeScript
 - Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Tailwind CSS & shadcn/ui
+- Recharts (Dynamic Data Visualization)
 
-## How can I deploy this project?
+**Backend & ML Engine:**
+- Python 3 & FastAPI
+- Pathway (Streaming LiveAI Framework)
+- Scikit-Learn (Random Forest)
+- Hugging Face `transformers` (DistilBERT)
+- Pandas & NumPy
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 🛠️ Getting Started
 
-Yes, you can!
+To run EcoSim locally, you will need to start both the LiveAI Python backend and the React frontend.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### 1. Start the Backend (Microservice Architecture)
+Navigate to the `backend` directory and install the required Python dependencies:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```bash
+cd backend
+pip install fastapi uvicorn pandas scikit-learn transformers torch pathway joblib
+Because EcoSim uses a live event-driven architecture, you need to run three separate processes. Open three terminal windows in the backend folder and run one command in each:
+
+Terminal 1 (IoT Data Stream): ```bash
+python data_generator.py
+
+Terminal 2 (Pathway Inference Engine): ```bash
+python pathway_engine.py
+
+Terminal 3 (FastAPI REST Server): ```bash
+uvicorn main:app --reload --port 8000
+
+
+2. Start the Frontend Application
+Open a new terminal at the root of the project to install Node modules and spin up the UI:
+
+Bash
+npm install
+npm run dev
+The application will now be running locally at http://localhost:5173.
+
+Built for the Hack For Green Bharat Hackathon.
+
+
+### How to apply this and push it:
+1. Replace the contents of your `README.md` with the text above.
+2. Run these commands in your terminal to sync it to GitHub:
+   ```bash
+   git add README.md
+   git commit -m "Update README with professional project architecture"
+   git push origin main
