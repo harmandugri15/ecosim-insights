@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Leaf, BarChart3, GitCompare, ShieldCheck, FileText, Menu, X, Building2, Shield, LogIn, LogOut, Moon, Sun, User } from "lucide-react";
+import { Leaf, BarChart3, GitCompare, ShieldCheck, FileText, Menu, X, Building2, Shield, LogIn, LogOut, Moon, Sun, User, Radio } from "lucide-react";
 import { useState } from "react";
 import { useAuth } from "@/lib/auth-context";
 import { useTheme } from "@/lib/theme-context";
@@ -13,6 +13,7 @@ const navItems = [
   { to: "/greenwashing", label: "Greenwash", icon: ShieldCheck },
   { to: "/analytics", label: "Analytics", icon: FileText },
   { to: "/organization", label: "Org", icon: Building2 },
+  { to: "/live-auditor", label: "Live Auditor", icon: Radio },
   { to: "/admin", label: "Admin", icon: Shield },
 ];
 

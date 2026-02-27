@@ -13,6 +13,7 @@ import GreenwashingPage from "@/pages/GreenwashingPage";
 import AnalyticsPage from "@/pages/AnalyticsPage";
 import OrganizationDashboard from "@/pages/OrganizationDashboard";
 import AdminPage from "@/pages/AdminPage";
+import LiveAuditorPage from "@/pages/LiveAuditorPage";
 import LoginPage from "@/pages/LoginPage";
 import NotFound from "@/pages/NotFound";
 
@@ -35,6 +36,7 @@ const App = () => (
               <Route path="/analytics" element={<AnalyticsPage />} />
               <Route path="/organization" element={<OrganizationDashboard />} />
               <Route path="/admin" element={<AdminPage />} />
+              <Route path="/live-auditor" element={<LiveAuditorPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

@@ -1,0 +1,19 @@
+# =============================================================================
+# EcoSim Backend — Python Dependencies
+# =============================================================================
+# Install:  pip install -r requirements.txt
+# =============================================================================
+
+# --- Core Framework ---
+fastapi>=0.115.0
+uvicorn[standard]>=0.34.0
+
+# --- Real-Time Data Processing (Hackathon USP) ---
+pathway>=0.15.0
+
+# --- AI / NLP Model ---
+transformers>=4.46.0
+torch>=2.5.0
+
+# --- Utilities ---
+python-multipart>=0.0.12
